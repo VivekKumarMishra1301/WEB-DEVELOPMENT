@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <style type="text/css">
+        .wrapper{
+            display:grid;
+           
+            grid-template-columns: 25% 50% 25%;
+            grid-column-gap: 0.1em;
+            grid-row-gap:0.3em;
+            
+        }
+        .wrapper>div{
+            background-color:aqua;
+            padding:10px;
+            height:30;
+         
+        }
+        .header{
+            background-color:orange;
+            text-align: center;
+            line-height:3;
+        }
+        .style{
+            border:3px solid black;
+            background: blueviolet;
+            border-radius:5px;
+        }
+        .pad{
+            padding:5px;
+            margin:15px;
+        }
+        .ch{
+            background-color:red;
+            border:3px solid red;
+            border-color:blue;
+            border-radius:5px;
+        }
+        .box1{
+            text-align:center;
+        }
+        .footer{
+            background-color:chocolate;
+            text-align: center;
+            line-height:7;
+            
+        }
+ 
+        </style>
+
+</head>
+<body>
+   
+    <div class="header">Header section</div>
+    <br>
+<form action="login.jsp">
+    <div class="wrapper">
+        <div class="box1">
+            <div class="style"><label for="ename">Email-Id</label></div>
+            <br>
+            <div class="style"><label for="pname">Password</label></div>
+        </div>
+        <div class="box1">
+            <input type="email" id="ename" placeholder="Enter your email id" required><br><br>
+            <input type="password" id="pname" placeholder="Enter your password" required><br><br>
+            <div class="pad"><input type="submit" value="Login" required>
+            <input type="reset" required></div>
+            
+        </div>
+        <div class="box1"><b class="ch">Notification</b>
+        <marquee direction="up" scrollamount="3" onmouseover="stop();" onmouseout="start();">
+            <ul >
+                <li style="background-color:orange">Enigma</li>
+                <li style="background-color:orange">sessional-I</li>
+                <li style="background-color:orange">End Semester</li>
+            </ul>
+        </marquee>
+        
+    </div></div>
+</form>
+<br>
+<div class="footer">Footer section</div>
+  
+</body>
+</html>

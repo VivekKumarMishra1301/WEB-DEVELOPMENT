@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamara Apna Calculator </title>
+    <style type="text/css">
+        .st{
+            background-color:green;
+            border:2px solid blue;
+            border-radius:10px;
+        }
+        table{
+            border-collapse:collapse;
+            border-radius: 10px;
+            margin:20px;
+            padding:20px;
+        }
+        .change{
+            padding:20px;
+            
+            font-size:20px;
+            text-align:right;
+
+        }
+        a{
+            text-decoration: none;
+            background-color:black;
+            margin-top:10px;
+            padding:10px;
+            color:white;
+            border:5px solid white;
+            border-radius:10px;
+        }
+        </style>
+        <script type="text/javascript">
+            function cal(data){
+            previous=document.getElementById('calc').value;
+            document.getElementById("calc").value=previous+data;
+        }
+       
+
+        function cal(data){
+            previous=document.getElementById('calc').value;
+            document.getElementById("calc").value=previous+data;
+            
+        }
+        function outp(){
+            var result=eval(document.getElementById("calc").value);
+            //document.write(result);
+            document.getElementById("calc").value=result;
+        }
+
+        function cl(){
+            
+            document.getElementById("calc").value="";
+            
+        }
+
+        </script>
+</head>
+<body>
+<div><b><center><h1><a href="#">CALCULATOR</a></h1></center></b></div>
+    <center>
+        <table border="1">
+            <tr>
+                <td colspan="4" class="st"><input  class="change" type="text" id="calc"></td>
+            </tr>
+            <tr>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cl()">C</button>
+                </td>
+                <td class="st">
+                
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">()</button>
+                </td>
+                <td class="st">
+                    <button  style="width: 100%;" onclick="cal(this.innerHTML)">%</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">/</button>
+                </td>
+            <tr>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">7</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">8</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">9</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">4</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">5</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">6</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">1</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">2</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">3</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;"  onclick="cal(this.innerHTML)">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">00</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">0</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="cal(this.innerHTML)">.</button>
+                </td>
+                <td class="st">
+                    <button style="width: 100%;" onclick="outp(this.innerHTML)">=</button>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

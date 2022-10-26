@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Events</title>
+    <style>
+      #btn {
+        padding: 10px 14px;
+        background-color: red;
+        border: 2px solid black;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- browser events: 
+    click 
+    context menu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+
+    submit
+    focus
+
+
+    DOMContentLoaded
+
+    transitioned-->
+
+    <div class="container">
+      <h1 id="me">This is Heading</h1>
+      <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad nihil
+        reiciendis est voluptate a, sapiente cupiditate officiis doloribus vero
+        ex dolor maiores cum deserunt dolorem quas repellat ullam quod quis
+        alias minima? Perspiciatis odit earum similique sunt culpa nulla! Quos
+        hic architecto, sapiente nostrum consectetur illo numquam beatae ab
+        laboriosam totam sint alias. Iste est cupiditate voluptatum doloribus,
+        consectetur libero unde voluptatem fugiat earum impedit, atque facilis
+        saepe, officiis possimus! Soluta ducimus non voluptatem libero culpa est
+        rem neque tenetur deserunt placeat magnam impedit quae ad illo optio
+        quod praesentium et animi, accusantium exercitationem molestiae dolorem
+        fugiat dolor cupiditate?
+      </p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Click Me</button>
+
+    <script>
+      //   let para = document.getElementById("para");
+      //   para.addEventListener("mouseover", function run() {
+      //     alert("Mouse Inside");
+      //   });
+
+      //   //   para.addEventListener("mouseout", function run() {
+      //   //     alert("Mouse Outside");
+      //   //   });
+
+      function toggleHide() {
+        let btn = document.getElementById("btn");
+
+        let para = document.getElementById("para");
+        //if we remove the above two lines in the script tag then there will be no effect on the show hide button it will work similarly as earlier because in modern browser the id is unique and it is identified easily but if you will provide some other changes then it will not work it will generate an error message in the console
+
+        if (para.style.display != "none") {
+          para.style.display = "none";
+          document.getElementById("btn").innerHTML = "Show";
+        } else {
+          para.style.display = "block";
+          document.getElementById("btn").innerHTML = "Hide";
+        }
+      }
+    </script>
+  </body>
+</html>

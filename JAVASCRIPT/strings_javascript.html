@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript String functions</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      var str = "this is s astring creayted by me in the javascript is";
+      console.log(str);
+      var position = str.indexOf("is"); //to check the index of the variable
+      //first occurence of a string
+      console.log(position);
+      //occurence of the last string
+      var position2 = str.lastIndexOf("is");
+      console.log(position2);
+      //var substr = str.slice(1, 5); //we pass the start and the last index for the slicing of the string
+      var substr = str.substring(1, 7); //it does not take negative value for the slicing while slice function takes the negative indexing gvalue in the arguyemnts passed
+      var substr2 = str.substr(1, 7); //here secondparameter is used to tell the length of the string upto which u want to slice the string and it always start with the 1
+
+      console.log(substr);
+      console.log(substr2);
+      //replacingn the string in the javascript
+      //   var replaced = str.replace("string", "Vivek"); //here first string is given thet WHART IS TO BE REPLACED and from wht it is to be replaced
+      //   console.log(replaced);
+      console.log(str.toUpperCase());
+      console.log(str.toLowerCase());
+      var concat = str.concat("newstring");
+      console.log(concat);
+      var trim = "    this contains    whitespaces    ";
+      console.log(trim);
+      console.log(trim.trim()); //used to trim the whitespaces
+      var char3 = str.charAt(2); //gives the character present at this position
+
+      console.log(char3);
+      var char4 = str.charCodeAt(2); //gives the character code at this position
+      console.log(char4);
+    </script>
+  </body>
+</html>

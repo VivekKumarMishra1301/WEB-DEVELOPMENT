@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript First Page</title>
+	<script type="text/javascript">
+		//document.getElementById('demo').innerHTML=5+6;it will not work here
+	</script>
+</head>
+<body>
+	<h1 id="heading">I will be changed</h1>
+	<p id="demo" style="font-size: large; color: black;">Click me to change the above statement</p>
+	<button onclick="document.getElementById('heading').innerHTML= 'I am changed by clicking the button'">Hey! click here</button>
+    
+    
+    <h2 onclick="alert('h2 is clicked by me!')">hey you can clik me</h2><!--her you can use both you vcan also use window.alert-->
+
+    
+	<script type="text/javascript">
+		document.getElementById('demo').innerHTML=5+6;
+
+		reference = document.getElementById('demo');
+		reference.innerHTML='I am changed using the variable';
+	</script>
+    <button onclick="window.print()">print this page</button>
+</body>
+</html>

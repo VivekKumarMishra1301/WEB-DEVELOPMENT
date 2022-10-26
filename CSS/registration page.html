@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2.borderHeading{
+            border-bottom: 2px solid darkblue;
+            border-top:none;
+            background-color:rgb(135, 183, 235);
+            border-left:none;
+            border-right:none;
+            padding:20px;
+            text-align:center;
+            border-radius:20px;
+
+        }
+        table, td{
+            border: none;
+            padding:10px;
+            margin: 10;
+        }
+
+        td.colorSpecific{
+            
+            
+            background-color:rgba(78, 85, 138, 0.42);
+        }
+        p.colorSpecific{
+            background-color:rgba(78, 85, 138, 0.42);
+        }
+        td.colorStyle{
+            background-color:rgba(78, 85, 138, 0.42);
+        }
+
+        td{
+            border-radius: 7px;
+        }
+        body{
+            background-color:aqua;
+            color:darkblue;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2 class="borderHeading"><center>REGISTER HERE</center></h2>
+
+    </div>
+    <div>
+      
+        <center>
+            <form>   
+                      <table border="1" >
+                <tr>
+                    <td class="colorSpecific"><label for="fname">First Name</label></td>
+                    <td class="colorStyle"><input type="text" placeholder="Enter your First Name" id="fname" required>
+                </tr>
+                <tr>
+                    <td  class="colorSpecific"><label for="mname">Middle Name</label></td>
+                    <td  class="colorStyle"><input type="text" placeholder="Enter your Middle Name" id="mname" required>
+                </tr>
+                <tr>
+                    <td  class="colorSpecific"><label for="lname">Last Name</label></td>
+                    <td  class="colorStyle"><input type="text" placeholder="Enter your Last Name" id="lname" required>
+                </tr>
+                <tr>
+                    <td  class="colorSpecific"><label for="ename">Email Id</label></td>
+                    <td  class="colorStyle"><input type="text" placeholder="Enter your Email Id" id="ename" required>
+                </tr>
+                <tr>
+                    <td  class="colorSpecific"><label for="cname"> Contact Number</label></td>
+                    <td  class="colorStyle"><input type="Number" placeholder="Enter your Contact Number " id="cname" required>
+                </tr>
+                <tr>
+                    <td  class="colorSpecific"><label for="aname">Address</label></td>
+                    <td  class="colorStyle"><input type="textarea" placeholder="Address " id="aname" required>
+                </tr>
+                <tr>
+                    <td  class="colorSpecific"><label for="dname">Date Of Birth</label></td>
+                    <td  class="colorStyle"><input type="date"  id="dname" required>
+                </tr>
+                <tr>
+                    <td  class="colorSpecific"><label for"uname">Upload Photo</label></td>
+                    <td  class="colorStyle"><input type="file"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type ="checkbox"><p  class="colorSpecific">I accept all the terms and condition .In any mistake i will be responsible for the action</p></td>
+                    
+                </tr>
+               
+                <tr>
+                    <td  class="colorStyle">
+                       <center> <input type ="submit"></center>
+                    </td>
+                    <td  class="colorStyle"><center><input type ="reset"></center></td>
+                </tr>
+                
+            </table>
+            </form>
+        </center>
+
+
+        </div>
+</body>
+</html>

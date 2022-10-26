@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeOut and ClearTimeOut</title>
+  </head>
+  <body>
+    <div class="container">This is a container</div>
+    <script>
+      console.log("This is tutorial 58");
+      //   setTimeout-->Allows us to run the function once after the interval of time
+      //   setTimeout-->Allows us to run the function repeatedly after the interval of time
+      function greet(name, wel) {
+        console.log("Hello World" + name + wel);
+      }
+      //   setTimeout(()=>{
+
+      //   },5000);It is one method in curly braces we give the function declaration
+
+      //setTimeout(greet, 5000, "Vivek", "Welcome");
+      //do not use parentheses in the first arguement only write the function nsme in thr arguement
+
+      //   timeout = setTimeout(greet, 5000, "Vivek", "Welcome");
+      //   //here now it will return s unique id
+      //   clearTimeout(timeout); //Here we can use this to clear the earlier timeout called because consider a situation a eeader is reading an article on the website if u want to ask to signup u will use the settimout butr if he had already signed up before calling of sign up by settimeout the we use the cleartimeout to remove that calling of the settimeout
+
+      setInterval(greet, 2000, " Vivek", " Bhai");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAvigation example</title>
+</head>
+<body>
+    <button id="btn">Dabaoo</button>
+    <script type="text/javascript">
+        var myButton=document.getElementById("btn");
+        myButton.addEventListener("click",function(){
+            window.open('Calculator.html');
+        });
+        myButton.addEventListener("mouseover",changeMyButton);
+        myButton.addEventListener("mouseout",changeMyButt);
+        function changeMyButton(){
+            myButton.style.backgroundColor="red";
+            myButton.style.color="white";
+
+        }
+        function changeMyButt(){
+            myButton.style.backgroundColor="white";
+            myButton.style.color="black";
+
+        }
+    </script>
+</body>
+</html>

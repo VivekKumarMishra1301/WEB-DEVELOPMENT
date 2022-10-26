@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+ margin:20px;
+        }
+        div{
+            background-color:blue;     
+            padding:20px;
+            border:1px solid;
+        }
+        #my{
+background-image: url(demo.png);
+        }
+        .center{
+            text-align:center;
+        }
+        .special{
+            text-decoration:overline;
+        }
+        span.specific{
+background-color:red;
+color:blue;padding:10px;
+        }
+
+        <!--for inserting image in the background-->
+body{
+    background-image: url("demo.png");
+    background-repeat: repeat-x;    /*for repeating the image-->*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /*to stop the scrolling in the image*/
+}
+        
+    </style>
+</head>
+<body>
+
+    <p  class="center" id="#my">orem ipsum dolor sit amet consectetur adipisicing elit. Cum, molestiae. Quo cumque praesentium modi tempore nesciunt cum repellat maiores repudiandae neque eius quisquam explicabo dolorum, laboriosam hic facilis mollitia itaque molestias rerum illo corrupti suscipit ipsa a vero accusantium! Blanditiis veniam alias cumque modi id optio, eius placeat deleniti quae.
+   </p>
+   
+   <p  class="center special" id="#my">orem ipsum dolor sit amet consectetur <span class="specific">adipisicing elit. Cum, molestiae. Quo cumque praesentium modi tempore nesciunt</span> cum repellat maiores repudiandae neque eius quisquam explicabo dolorum, laboriosam hic facilis mollitia itaque molestias rerum illo corrupti suscipit ipsa a vero accusantium! Blanditiis veniam alias cumque modi id optio, eius placeat deleniti quae.
+</p>
+<!--using multiple selector-->
+        <div >Lorem ipsum dolor sit amet<span class="specific">consectetur adipisicing elit.</span> A sit rem molestias nemo deserunt at placeat natus debitis, maxime ducimus aperiam cumque, asperiores iusto tempore cupiditate repudiandae voluptatum repellendus? Possimus ab est dolorem magni, minus repellendus, id incidunt illo veniam ipsa labore cupiditate sunt. Doloremque quia cum eveniet tempora totam, commodi voluptates accusamus provident non recusandae vitae obcaecati mollitia tempore deserunt maiores itaque ea quos, cumque ducimus, harum ipsa esse. Blanditiis aut officiis, eligendi sit maxime facere veniam consequatur quo voluptatibus impedit voluptates unde laboriosam soluta fugit. Eaque at quae facere ipsam error commodi fuga quisquam reiciendis numquam accusantium! Eius.
+        
+    </div>
+</body>
+</html>

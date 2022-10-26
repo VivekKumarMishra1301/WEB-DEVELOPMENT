@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForms" name="myForm" onsubmit="return handleForm()">
+        Firt name:<input type="text" name="FirstName" value=""><br>
+        Last name:<input type="text" name="LastName"><br>
+        Gender:<input type="radio" value="Male" name="gender">
+        Male<input type="radio" value="Female" name="gender">Female
+        <!--here return is used to check thr balue returned should true then it is fetched by the server-->
+        FAvourite color:<input type="checkbox" name="colors[]" value="red">red</input>
+        green:<input type="checkbox" name="colors[]" value="green">
+        yellow:<input type="checkbox" name="colors[]" value="yellow">
+        blue:<input type="checkbox" name="colors[]" value="blue">
+        <input type="submit" onclick="return printData()">
+    </form>
+    <div id="printData">
+
+    </div>
+    <script type="text/javascript">
+        function handleForm(){
+            var favColors=document.forms['myForm']['colors[]'];
+            var text="";
+            for(var current of favColors){
+                if(current.checked){
+                    text+=current.value+"<br>"
+                }
+            }
+
+            document.getElementById("printData").innerHTML=text;
+            return false;
+
+        }
+
+
+    </script>
+</body>
+</html>

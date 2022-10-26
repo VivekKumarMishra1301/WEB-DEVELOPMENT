@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions</title>
+  </head>
+  <body>
+    <div class="container">This is a arrow functions Tutorial</div>
+    <script>
+      //Simple Functions
+      // function greet(){
+      //     console.log("Good Morning");
+
+      // }
+      // greet();
+
+      //Arrow Functions
+      greet = () => {
+        console.log("Good Morning");
+      };
+
+      greet();
+
+      setTimeout(() => {
+        console.log("We are inside setTimeout");
+      }, 3000);
+
+      let sum = (a, b) => {
+        return a + b;
+      };
+      let p = sum(34, 35);
+      console.log(p);
+
+      //More Shortcut Method
+      let sum2 = (a, b) => a + b;
+      sumt = sum2(35, 36);
+      console.log(sumt);
+
+      let half = (a) => a / 2; //Here we need not to apply the parentheses for the arguement in single arguement case
+      halft = half(35, 36);
+      console.log(halft);
+
+      greet = () => console.log("Good Morning"); //here we can not remove the parentheesse . So in the case of abseence of all arguements we will use the parentheses
+
+      greet();
+
+      //Arrow functiins in the objects
+      let obj1 = {
+        greeting: " Good morning",
+        names: ["Vivek", "Rohan", "Skillf", "DJKhiladi"],
+        speak() {
+          this.names.forEach((student) => {
+            console.log(this.greeting + "kukadoo koo " + student);
+          });
+        },
+      };
+      obj1.speak();
+    </script>
+  </body>
+</html>

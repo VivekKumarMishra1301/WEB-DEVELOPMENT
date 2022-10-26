@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulating DOM</title>
+  </head>
+  <body>
+    <div id="main" class="container">
+      <ul id="nav">
+        <li>home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>More About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+    <div class="container">Another container</div>
+
+    <script>
+      let main = document.getElementById("main");
+      console.log(main);
+      let nav = document.getElementById("nav");
+      console.log(nav);
+
+      //getting element by class name
+      let containers = document.getElementsByClassName("container");
+      console.log(containers);
+
+      //querry selector which was used in the css will also be used he3re
+      let sel = document.querySelector(".container");
+      console.log("Selector returns", sel);
+
+      //her it is selecting nav as id in the html
+      let sel2 = document.querySelector("#nav");
+      console.log("Selector returns", sel2);
+    </script>
+  </body>
+</html>

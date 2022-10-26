@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactin using alert confirm and prompt</title>
+  </head>
+  <body>
+    <div class="container">This is a javascript page</div>
+    <script type="text/javascript">
+      //Alert in browser javascript does not return anything
+      //   alert("This is a message");
+
+      //   let name = prompt("what is your name", "Guest"); //@nd arguemet is given as default arguyement
+      //   console.log(name);
+
+      let deletePost = confirm("Are you sure you want to delete?");
+      //console.log(deletePost);
+      if (deletePost) {
+        //code to delete the post
+        console.log("Your post has been deleted successfully");
+      } else {
+        //code to cancel the deleting of the post
+        console.log("Your post has not been deleted successfully");
+      }
+    </script>
+  </body>
+</html>

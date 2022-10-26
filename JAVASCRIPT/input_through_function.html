@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input through Functions</title>
+    <script type="text/javascript">
+        function input(){
+            let input1=prompt("enter first number");
+
+            let input2=prompt("enter second number");
+            input1=parseInt(input1);
+            input2=parseInt(input2);
+            //number(input1)
+            result = input1 + input2;
+            
+            document.getElementById("result").innerHTML="<b>The addition of two input is :</b>"+result;
+
+           // document.getElementById("result").innerHTML=output;
+        }
+        function output(){
+            window.alert(result);
+        }
+        
+    </script>
+</head>
+<body>
+    <p id="result"></p>
+    <p id="check"></p>
+    <button onclick="input()">Give Inputs</button>
+    <button onclick="output()">Show output on the alert</button>
+    <button onclick=""checker(this.innerHTML)">5</button><!--this is used to check the current element -->
+</body>
+</html>

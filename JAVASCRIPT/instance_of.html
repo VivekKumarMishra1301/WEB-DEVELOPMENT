@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>fruits of instance of object</h4>
+    <p id="demo1"></p>
+    <script type="text/javascript">
+        let fruits=["mango","banana","orange"];
+        let result1=(fruits instanceof Object);
+        let result2=(fruits instanceof Array);
+        let result3=(fruits instanceof String);
+        document.getElementById("demo1").innerHTML=result1+" "+result2+" "+result3;
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!-- formsWithJavaScript.htm -->
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Forms with JavaScript</title>
+
+	<style type="text/css">
+		.errorStyle{
+			color: red;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function validateData(data, indexValue){
+			var errorMessages = [];
+			errorMessages[0] = "Please fill your first name";
+			errorMessages[1] = "Please fill your last name";
+
+			var errorIDs = [];
+			errorIDs[0] = "firstNameError";
+			errorIDs[1] = "lastNameError";
+
+
+			if(data == ""){
+				document.getElementById(errorIDs[indexValue]).innerHTML = errorMessages[indexValue];
+			}
+			else{
+				document.getElementById(errorIDs[indexValue]).innerHTML = "*";	
+			}
+		}
+	</script>
+
+</head>
+<body>
+
+	<form name = "myForm1" id = "myForm" onsubmit="return printForm()">
+		First Name: <input type = "text" name = "firstName" onkeyup="validateData(this.value, 0)">               
+
+		<span id = "firstNameError" class = "errorStyle">*</span>
+		
+		<br>
+
+		Last Name: <input type = "text" name = "lastName" onkeyup="validateData(this.value, 1)">
+
+		<span id = "lastNameError" class = "errorStyle">*</span>
+		
+		<br>
+
+		<!--<input type = "submit" onclick="return printForm()">-->
+		<input type = "submit">
+	</form>
+
+	<div id = "printFormData">
+
+	</div>
+
+	<script type="text/javascript">
+
+		function printForm(){
+			var firstName = document.forms['myForm1']['firstName'].value;
+
+			var lastName = document.forms['myForm1']['lastName'].value;
+
+			document.getElementById("printFormData").innerHTML = "You have submitted with values <b>" + firstName + " " + lastName + "</b>";
+
+			return false;
+		}
+		
+		
+
+	</script>
+</body>
+</html>

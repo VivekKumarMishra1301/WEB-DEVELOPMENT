@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops in javascript</title>
+  </head>
+  <body>
+    <div class="container">This is tutorial of the javascript</div>
+    <script>
+      let friends = ["Rohan", "Sanjeev", "Deepti", "Pooja", "Skillf"];
+      //   let i = 0;
+      //   for (i = 0; i < friends.length; i++) {
+      //     console.log("Hello Friend " + friends[i]);
+      //   }
+
+      //   //Modern Way to use the loops usiong the function in javascript
+      //   friends.forEach(function f(element) {
+      //     console.log("Hello Friend " + element + " to modern javascript");
+      //   });
+
+      //For of LOOPS
+
+      for (element of friends) {
+        console.log("Hello Friend " + element + " to modern javascript");
+      }
+
+      let employee = {
+        name: "Vivek",
+        salary: 0,
+        channel: "none",
+        channel2: "no name",
+        "channel 3": "hello", //here to give the space within the name of the objects we can use this method of declartation
+      };
+
+      //This loop is used yo iterate the objects in javascript
+
+      for (key in employee) {
+        console.log(`the ${key} of employee is ${employee[key]}`);
+      }
+
+      //While loop in js
+      let i = 0;
+      while (i < 4) {
+        console.log("i is less then 4");
+        i = i + 1;
+      }
+    </script>
+  </body>
+</html>

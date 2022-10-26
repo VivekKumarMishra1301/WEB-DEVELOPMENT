@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Calender</title>
+	<style type="text/css">
+		table,th,td{
+			border: 2px solid gray;
+			border-collapse: collapse;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="wrapper"></div>
+
+	<script type="text/javascript">
+		var weeks=['SUN','MON','TUE','WED','THUR','FRI','SAT'];
+		var years=['JAN','FEB','MAR','APR','MAY','JUNE','JULY','AUG','SEP','OCT','NOV','DEC'];
+		var calenderObject=document.getElementById('wrapper');
+		currentYear=new Date().getFullYear();
+		currentMonth=new Date().getMonth();
+		function generateCalender(selectedYear,selectedMonth)
+		{	
+			//creating table element
+            //finding first day of month
+            var firstDay=new Date(selectedYear,selectedMonth,1).getDay();
+            var lastDate=32-new Date(selectedYear,selectedMonth,32).getDate();
+
+			var table=document.createElement('table');
+			var thead=document.createElement('thead');
+			var weekHead=document.createElement('tr');
+
+			for(weekNames=0;weekNames<weeks.length;weekNames++){
+				weekHeading=document.createElement("th");
+				weekText=document.createTextNode(weeks[weekNames]);
+				weekHeading.append(weekText);
+				weekHead.append(weekHeading);
+			}
+			var tbody=document.createElement("tbody");
+			var dateDate=1
+			for(weekRows=0;weekRows < 6;weekRows++){
+				tableRows=document.createElement("tr");
+				for(weekDays=0;weekDays<weeks.length;weekDays++){
+                    if(dateDate>lastDate  ){
+                        continue;
+                    }
+					
+                    if(weekDays<firstDay &&weekRows==0){
+                        tableData=document.createElement("td");
+                    tableRows.append(tableData);
+
+                    }
+                    else{
+
+                        tableData=document.createElement("td");
+					printDate=document.createTextNode(dateDate);
+					tableData.append(printDate);
+					tableRows.append(tableData);
+					dateDate++;
+                    }
+                   
+				}
+				tbody.append(tableRows);
+			}
+			
+
+			thead.append(weekHead);
+			table.append(thead);
+			table.append(tbody); 
+			calenderObject.append(table);
+		}
+		generateCalender(currentYear,currentMonth);
+	</script>
+
+</body>
+</html>

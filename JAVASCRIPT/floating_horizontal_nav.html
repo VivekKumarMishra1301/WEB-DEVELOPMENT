@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horizontalNavigation</title>
+    <style type="text/css">
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type:none;
+            text-decoration: none;
+            background-color:aqua;
+            overflow:hidden;
+
+        }
+       li {
+            float: right;
+            border-right: 5px solid white;
+            border-radius:5px;
+        }
+       
+         ul li a{
+            display:block;
+            text-decoration: none;
+            padding: 15px 20px;
+            color:black;
+        } 
+        ul li a:hover{
+            background-color:red;
+            font-size: 20px;
+            border:5px;
+            border-radius: 5px;
+        }
+        .active{
+            background-color:black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" >INdoor Games</a></li>
+        <li><a href="#">Outdoor Games</a></li>
+        <li><a href="#">In-House  Games</a></li>
+        <li><a href="#" style="float:left;" class="active">External Registration</a></li>
+    </ul>
+</body>
+</html>

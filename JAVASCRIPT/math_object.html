@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>math objectr</title>
+  </head>
+  <body>
+    <div class="container">This is a math object</div>
+    <script type="text/javascript">
+      let m = Math;
+      console.log(m);
+      //       E: 2.718281828459045
+      // LN2: 0.6931471805599453
+      // LN10: 2.302585092994046
+      // LOG2E: 1.4426950408889634
+      // LOG10E: 0.4342944819032518
+      // PI: 3.141592653589793
+      // SQRT1_2: 0.7071067811865476
+      // SQRT2: 1.4142135623730951
+
+      //printing the math constants
+      console.log("the vlue of Math.E is ", Math.E);
+      console.log("the vlue of Math.PI is ", Math.PI);
+      console.log("the vlue of Math.LN2 is ", Math.LN2);
+      console.log("the vlue of Math.SQRT1_2 is ", Math.SQRT1_2);
+      console.log("the vlue of Math.LOG2E is ", Math.LOG2E);
+
+      //Printing Math object from the functions
+      let a = 34.64534;
+      let b = 89;
+      console.log("The value of a and b is ", a, b);
+      console.log(
+        "The value of a and b rounde is ",
+        Math.round(a),
+        Math.round(b)
+      );
+
+      console.log("3 raised to the power of 2 is ", Math.pow(3, 2));
+      console.log("Square root of 36 is ", Math.sqrt(36));
+      console.log("Square root of 50 is ", Math.sqrt(50));
+
+      console.log("the ceil of 5.8 ", Math.ceil(5.8));
+      console.log("The floor of 5.8 is ", Math.floor(5.8));
+
+      //Absolute Functions
+      console.log("The absolute of  -36 is ", Math.abs(-36));
+      //Trigonometruic Functions
+      console.log("The value of sin(pi)", Math.sin(Math.PI));
+
+      //Min and max
+      console.log("The miin of  4  5 6", Math.min(4, 5, 6));
+      console.log("The max of  4  5 6", Math.max(4, 5, 6));
+
+      //Generating Random Number Generator
+      let r = Math.random(); //it is generate random number bw 0 and 1 oin default
+      console.log("The random number is ", r);
+
+      //To generate random number between a and b
+      let c = 1;
+      let d = 100;
+      let r1_100 = c + (d - c) * Math.random();
+      console.log("tyeh random number is", r1_100);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ararys and Objects</title>
+  </head>
+  <body>
+    <div class="container">Simple si html file</div>
+    <script>
+      let myVar = 34;
+      let myVar2 = "string";
+      let myVar3 = true;
+      let myVar4 = null;
+
+      let employee = {
+        name: "Vivek",
+        salary: 0,
+        channel: "none",
+        channel2: "no name",
+        "channel 3": "hello", //here to give the space within the name of the objects we can use this method of declartation
+      }; //It is a created object from our side
+
+      //These two methods are similar to access the objects it is said as method of an object
+      // console.log(employee.channel);
+      // console.log(employee["channel"]);
+      // console.log(employee["channel 3"]);
+
+      //Arrays:It is a special type of object which workjs as the earlier created object in the javascript
+      let names = [1, 2, 4, "Vivek", undefined];
+      console.log(names);
+      // Creating Array in the form of aobject using the new keyword in the javascript
+
+      //let names2 = new Array(411, 2, 4, "Vivek", undefined);
+      let names2 = new Array(23, 45);
+      console.log(names2);
+      console.log(names2.length);
+      names2 = names2.sort();
+      console.log(names2);
+      names.push("this is pushed"); // this is used to pish the element in the array
+      console.log(names);
+      console.log(names.push());
+    </script>
+  </body>
+</html>

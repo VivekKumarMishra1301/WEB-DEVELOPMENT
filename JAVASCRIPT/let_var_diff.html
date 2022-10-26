@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+    <h4>result of x(<span id="x"></span>) + y(<span id="y"></span>)<h4>
+
+<h3 id="printVar"></h3>
+<h4 id="x">tring t redecalre the variable which is made by let keyword</h4>
+    <script type="text/javascript">
+        //variable declaration through var 
+        let x=5;
+        let y=5;
+        let z=x+y;
+        // let can't be decalred
+        //var can be redeclared
+        document.getElementById("x").innerHTML=x;
+        document.getElementById("y").innerHTML=y;
+        document.getElementById("printVar").innerHTML=z;
+
+
+        // document.getElementById("x+y").innerHTML=x; hence this can be changed in the let keyword so the only written in h4 tag that will be prnted and the statement written here it will give error it can be checked using the console by inspecting the webpage
+        // document.getElementById("y").innerHTML=y;
+        // document.getElementById("printVar").innerHTML=z;
+    </script>
+</body>
+</html>

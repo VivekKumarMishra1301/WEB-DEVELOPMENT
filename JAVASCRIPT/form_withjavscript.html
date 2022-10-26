@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        function printData(){
+            var firstname = document.forms['myForms']['FirstName'].value;
+            var lastname = document.forms['myForms']['LastName'].value;
+    
+            document.getElementById("printData").innerHTML="You have submitted with values<b> "+firstname+" "+lastname+"</b>";
+    
+    
+        return false;
+        
+        }
+    
+    </script>
+
+</head>
+<body>  
+    <form id="myForms">
+        Firt name:<input type="text" name="FirstName"><br>
+        Last name:<input type="text" name="LastName"><br>
+        <input type="submit" onclick="return printData()"><!--here return is used to check thr value returned should true then it is fetched by the server-->
+    </form>
+    <div id="printData">
+
+    </div>
+    
+</body>
+</html>

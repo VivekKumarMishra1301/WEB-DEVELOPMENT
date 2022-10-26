@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>2D - Form</title>
+	</head>
+
+	<style type="text/css">
+		body{
+			background-color: darkslategrey;
+			color: lightcyan;
+			font-family: sans-serif;
+		}
+
+		#commonInput{
+			width: 97%;
+			border-radius: 5px;
+			background-color: black;
+			color: lightcyan;
+			border: none;
+			outline: none;
+			padding: 8px;
+		}
+
+		input[type = "submit"], input[type = "reset"]{
+			width: 100%;
+			color: black;
+			background-color: lightcyan;
+			border-radius: 5px;
+			outline: none;
+			padding: 5px;
+		}
+
+		#heading{
+			text-align: center;
+		}
+
+		#myform{
+			margin-left: auto;
+			margin-right: auto;
+			width: 70%;
+		}
+
+		th, td{
+				
+		}
+
+		th{
+			text-align: right;
+			background-color: black;
+		}
+
+		td, th{
+			padding: 5px;
+			margin: 10px;
+			border-radius: 5px;
+		}
+
+	</style>
+
+	<body>
+		<div id = "parent">
+		<h2 id = "heading">Registration Form</h2>
+		
+		<form name = "myRegistrationForm" action="#" method = "get">
+
+		<table id = "myform" cellspacing="6px">
+			<tr>
+				<th>
+					<label for = "title">Title</label>
+				</th>
+				<td>
+					Mr. <input type="radio" name = "title" value = "Mr">
+
+					Mrs. <input type="radio" name = "title" value = "Mrs">
+
+					Ms. <input type="radio" name = "title" value = "Ms">
+				</td>
+			</tr>
+
+			<tr>
+				<th><label for = "fname">First Name</label></th>
+				<td><input id = "commonInput" type = "text" name = "fname" placeholder="Enter your first name"></td>
+			</tr>
+
+			<tr>
+				<th><label for = "lname">Last Name</label></th>
+				<td><input id = "commonInput" type = "text" name = "lname" placeholder="Enter your last name"></td>
+			</tr>
+
+			<tr>
+				<th><label for = "mailAdd1">Mail Address 1</label></th>
+				<td><textarea id = "commonInput" name = "mailAdd1">Write your mail address</textarea></td>
+			</tr>	
+
+			<tr>
+				<th><label for = "mailAdd2">Mail Address 2</label></th>
+				<td><textarea id = "commonInput" name = "mailAdd2">Write your mail address</textarea></td>
+			</tr>
+
+			<tr>
+				<th><label for = "city">City</label></th>
+				<td><input id = "commonInput" type = "text" name = "city" placeholder="Enter city name"></td>
+			</tr>
+
+			<tr>
+				<th><label for = "zip">ZIP</label></th>
+				<td><input id = "commonInput" type = "number" name = "zip"></td>
+			</tr>
+
+			<tr>
+				<th><label for = "uploadPhoto">Upload your photograph</label></th>
+				<td><input id = "commonInput" type="file" name="uploadPhoto"></td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type = "reset" name = "reset" value = "reset your form">
+				</td>
+
+				<td>
+					<input type = "submit" name = "submit" value = "Submit your form">
+				</td>
+			</tr>
+
+		</table>
+		</form>
+
+		</div>
+	</body>
+</html>

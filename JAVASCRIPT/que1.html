@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Example</title>
+</head>
+<body>
+    <h5 >the value of x(<span id="a"></span>) and y(<span id="b"></span>)</h5>
+    <button onclick="document.getElementById('heading').innerHTML='z'">Click this button to take result</button>
+    <button onclick="window.alert('The result is'+z)">Click this button to take result</button>
+    <script type="text/javascript">
+        var x=prompt("enter value of x");//it is used to take input in the alert 
+        var y=prompt("enter value of y");
+        var z=x+y;
+        //by this we print the result
+        document.getElementById('a').innerHTML='<i>'+x+'</i>';
+        document.getElementById('b').innerHTML=y;
+        
+        </script>
+</body>
+</html>

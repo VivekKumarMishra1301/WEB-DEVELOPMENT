@@ -1,0 +1,92 @@
+<!--byTagNAMe -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>element selection by tag name</title>
+  </head>
+  <body>
+    <h1>this is heading 1</h1>
+    <p>this paragraph is outside of wrapper div</p>
+    <div id="wrapper">
+      <p>
+        Paragraph 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nobis explicabo labore fuga praesentium, quas deserunt officiis quisquam
+        corporis aliquid quo nisi cumque exercitationem dicta voluptates
+        tempora. Excepturi, odit totam. Itaque accusamus officia dolore quae!
+        Dolor nostrum eum fugit saepe dolores aliquam in, optio reiciendis
+        beatae libero aspernatur? Magnam voluptate nostrum hic, ipsam dolor,
+        suscipit facere totam eum eaque consequatur est cumque. Labore illo
+        harum illum atque deleniti sunt perferendis necessitatibus cum iste
+        voluptates enim, nostrum vel esse aliquid, laborum suscipit modi eius
+        doloribus sint dignissimos dolor dolorum odio quos! Voluptatum nulla
+        doloribus excepturi ducimus dignissimos qui quas iste exercitationem
+        nesciunt.
+      </p>
+      <p>
+        Paragraph2: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Qui, aspernatur! Sed, quaerat laudantium itaque eaque, accusamus
+        adipisci dolor deserunt dolore veniam enim voluptates voluptas commodi,
+        nesciunt deleniti explicabo nemo officia illum maiores. Doloremque
+        corrupti dolor, est voluptate dicta ipsum tempore unde nulla quidem
+        suscipit nam laborum cupiditate beatae doloribus quis dolores repellat.
+        Maxime assumenda impedit officiis cupiditate omnis dignissimos quam,
+        neque corrupti. Sint eius aperiam vel est, exercitationem cumque
+        voluptatum saepe placeat blanditiis atque dolor ad nemo. Quis distinctio
+        eos cupiditate at ad suscipit fugit nostrum possimus magnam, doloremque
+        doloribus est expedita vitae, dolorum reiciendis quae mollitia! Nulla
+        eum rem, deserunt exercitationem ipsa recusandae soluta. Quod ducimus
+        sapiente nesciunt facilis. Dolorum maxime, ipsa illum fuga mollitia nisi
+        aperiam. Libero at perferendis eos ducimus culpa accusantium accusamus
+        necessitatibus, minima ex? Eum dolores velit necessitatibus atque? Quod,
+        nulla, sint voluptates voluptatibus, soluta dolorem culpa iusto fugit
+        atque sapiente itaque omnis laboriosam pariatur!
+      </p>
+
+      <p>
+        Paragraph 3: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nobis explicabo labore fuga praesentium, quas deserunt officiis quisquam
+        corporis aliquid quo nisi cumque exercitationem dicta voluptates
+        tempora. Excepturi, odit totam. Itaque accusamus officia dolore quae!
+        Dolor nostrum eum fugit saepe dolores aliquam in, optio reiciendis
+        beatae libero aspernatur? Magnam voluptate nostrum hic, ipsam dolor,
+        suscipit facere totam eum eaque consequatur est cumque. Labore illo
+        harum illum atque deleniti sunt perferendis necessitatibus cum iste
+        voluptates enim, nostrum vel esse aliquid, laborum suscipit modi eius
+        doloribus sint dignissimos dolor dolorum odio quos! Voluptatum nulla
+        doloribus excepturi ducimus dignissimos qui quas iste exercitationem
+        nesciunt.
+      </p>
+      <p>
+        Paragraph4: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Qui, aspernatur! Sed, quaerat laudantium itaque eaque, accusamus
+        adipisci dolor deserunt dolore veniam enim voluptates voluptas commodi,
+        nesciunt deleniti explicabo nemo officia illum maiores. Doloremque
+        corrupti dolor, est voluptate dicta ipsum tempore unde nulla quidem
+        suscipit nam laborum cupiditate beatae doloribus quis dolores repellat.
+        Maxime assumenda impedit officiis cupiditate omnis dignissimos quam,
+        neque corrupti. Sint eius aperiam vel est, exercitationem cumque
+        voluptatum saepe placeat blanditiis atque dolor ad nemo. Quis distinctio
+        eos cupiditate at ad suscipit fugit nostrum possimus magnam, doloremque
+        doloribus est expedita vitae, dolorum reiciendis quae mollitia! Nulla
+        eum rem, deserunt exercitationem ipsa recusandae soluta. Quod ducimus
+        sapiente nesciunt facilis. Dolorum maxime, ipsa illum fuga mollitia nisi
+        aperiam. Libero at perferendis eos ducimus culpa accusantium accusamus
+        necessitatibus, minima ex? Eum dolores velit necessitatibus atque? Quod,
+        nulla, sint voluptates voluptatibus, soluta dolorem culpa iusto fugit
+        atque sapiente itaque omnis laboriosam pariatur!
+      </p>
+    </div>
+    <button id="myClick" onclick="p()">Click to acccess the paragraaph</button>
+    <script type="text/javascript">
+      function p() {
+        var childPTags = document.getElementById("wrapper");
+        var selectedPs = childPTags.getElementByTagName("p");
+        selectedPs[0].style.color = "green";
+      }
+    </script>
+  </body>
+</html>

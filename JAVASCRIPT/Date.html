@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Dates</title>
+  </head>
+  <body>
+    <div class="container">This is a container</div>
+    <script type="text/javascript">
+      console.log("this is date and time tutorial");
+      let now = new Date();
+      console.log(now);
+
+      let now2 = new Date(0); //reference date from where it is taken
+      console.log(now2);
+
+      //let newDate=(year,month,date,hours,minutes,seconds,milliseconds)
+      let newDate = new Date(3020, 4, 6, 9, 3, 2, 34); //It is a constructor which creates the objects
+      console.log(newDate);
+
+      let yr = newDate.getFullYear();
+      console.log(yr);
+
+      let dt = newDate.getDate();
+      console.log(dt);
+
+      let month = newDate.getMonth();
+      console.log(month);
+
+      let hrs = newDate.getHours();
+      console.log(hrs);
+
+      let min = newDate.getMinutes();
+      console.log(min);
+
+      let sec = newDate.getSeconds();
+      console.log(sec);
+      let Day = newDate.getDay();
+      console.log(Day);
+
+      //Changing the Date in javascript
+      newDate.setDate(15); //If we give here incorrect date then it will automaticalluy correct itself
+      newDate.setMinutes(15);
+      console.log(newDate);
+      //similarly we have setMonth,SetDay,setSeconds,SetMinutes,setHours etc.
+
+      //Date.now();it is used to tell, the how ma y milliseconds passed away
+    </script>
+  </body>
+</html>

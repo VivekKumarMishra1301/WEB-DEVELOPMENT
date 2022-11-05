@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid gray;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <center id="container">
+      <div id="wrapper"></div>
+    </center>
+    <script>
+      var ratobject = document.getElementById("wrapper");
+      var ratshow = document.getElementById("container");
+      var data = parseInt(prompt("enter value of data"));
+      var size = data;
+      var gfg = new Array(size);
+      var smat = new Array(size);
+      for (var i = 0; i < smat.length; i++) {
+        smat[i] = [];
+      }
+      for (var i = 0; i < gfg.length; i++) {
+        gfg[i] = [];
+      }
+      var table = document.createElement("table");
+      for (var i = 0; i < size; i++) {
+        var tabler = document.createElement("tr");
+        for (var j = 0; j < size; j++) {
+          var tabled = document.createElement("td");
+
+          gfg[i][j] = parseInt(prompt("enter value"));
+          ratelement = document.createTextNode(gfg[i][j]);
+          tabled.append(ratelement);
+          tabler.append(tabled);
+        }
+        table.append(tabler);
+      }
+      ratobject.append(table);
+      function safe(x, y) {
+        if (x < size && y < size && gfg[x][y] == 1) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }
+      function rat(x, y) {
+        var ratmove = document.createElement("div");
+        var rattable = document.createElement("table");
+        if (x == data - 1 && y == data - 1) {
+          for (var i = 0; i < size; i++) {
+            var ratrow = document.createElement("tr");
+            for (var j = 0; j < size; j++) {
+              var ratdata = document.createElement("td");
+              if (i == x && j == y) {
+                ratpos = document.createTextNode("rat");
+                ratdata.append(ratpos);
+              }
+              ratrow.append(ratdata);
+            }
+            rattable.append(ratrow);
+            ratmove.append(rattable);
+            ratbreak = document.createElement("br");
+            ratshow.append(ratbreak);
+            ratshow.append(ratbreak);
+            ratshow.append(ratbreak);
+            ratshow.append(ratmove);
+          }
+          smat[x][y] = 1;
+          return 1;
+        }
+
+        var check = safe(x, y);
+        if (check == 1) {
+          for (var i = 0; i < size; i++) {
+            var ratrow = document.createElement("tr");
+            for (var j = 0; j < size; j++) {
+              var ratdata = document.createElement("td");
+              if (i == x && j == y) {
+                ratpos = document.createTextNode("rat");
+                ratdata.append(ratpos);
+              }
+              ratrow.append(ratdata);
+            }
+            rattable.append(ratrow);
+            ratbreak = document.createElement("br");
+            ratmove.append(rattable);
+            ratshow.append(ratbreak);
+            ratshow.append(ratbreak);
+            ratshow.append(ratbreak);
+            ratshow.append(ratmove);
+            // drawline = document.createElement("hr");
+            // ratshow.append(drawline);
+          }
+
+          smat[x][y] = 1;
+          var rec = setTimeout(rat, 3000, x + 1, y);
+          if (rec == 1) {
+            return 1;
+          }
+          var rec2 = setTimeout(rat, 3000, x, y + 1);
+          if (rec2 == 1) {
+            return 1;
+          }
+
+          smat[x][y] = 0;
+          return 0;
+        } else {
+          return 0;
+        }
+      }
+
+      setTimeout(rat, 5000, 0, 0);
+    </script>
+  </body>
+</html>
